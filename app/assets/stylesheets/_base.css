@@ -1,0 +1,13 @@
+#overlord-container {
+  width: 70vw;
+  margin: auto;
+  margin-top: 8vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Anton', sans-serif;
+}
+
+p, a, input {
+  font-family: 'Edu NSW ACT Foundation', cursive;
+}
