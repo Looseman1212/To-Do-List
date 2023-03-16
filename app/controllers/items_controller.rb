@@ -17,6 +17,7 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @list = List.find(@item.list_id)
   end
 
   def destroy

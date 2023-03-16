@@ -11,3 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 p, a, input {
   font-family: 'Edu NSW ACT Foundation', cursive;
 }
+
+body {
+  background-color: #e7e0a6;
+}
