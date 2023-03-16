@@ -1,0 +1,9 @@
+.list-of-lists {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.listindex-buttons {
+  display: flex;
+  justify-content: center;
+}
