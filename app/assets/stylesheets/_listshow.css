@@ -1,0 +1,32 @@
+.list-name {
+  font-size: 40px;
+}
+
+.list-options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.listshow-itemcontainer {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #ffe4c4;
+  border: 1px solid #ff8c00;
+}
+
+.item-content {
+  margin-top: 0.3rem;
+}
+
+.item-option {
+  padding: 3px;
+}
+
+.item-option:hover {
+  background-color: #ff8c00;
+  padding: 3px;
+  color: #fff;
+  border-radius: 3px;
+}
