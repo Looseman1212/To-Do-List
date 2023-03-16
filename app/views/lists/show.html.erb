@@ -1,2 +1,18 @@
-<h1 class="text-2xl"><%= @list.name %></h1>
-<%= link_to "Delete this list", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+<h1 class="list-name text-center"><%= @list.name %></h1>
+<% @list.items.each do |i| %>
+  <div class="listshow-itemcontainer flex justify-between">
+    <div class="item-name-content">
+      <h2><%= i.name %></h2>
+      <p class="item-content"><%= i.content %></p>
+    </div>
+    <div class="item-inspect-delete">
+      <p class="item-option"><%= link_to "Inspect this item", item_path %></p>
+      <p class="item-option"><%= link_to "Delete this item", item_path(i), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
+    </div>
+  </div>
+<% end %>
+<div class="list-options">
+  <%= link_to "Add a new item to this list", new_list_item_path(@list), class: "option-button" %>
+  <%= link_to "Delete this list", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "option-button" %>
+</div>

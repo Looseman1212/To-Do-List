@@ -1,0 +1,5 @@
+<%= simple_form_for [@list, @item] do |f| %>
+  <%= f.input :name, label: "What would you like to name this todo item?" %>
+  <%= f.input :content, label: "Enter any content about the item that you would like" %>
+  <%= f.button :submit, class: "sign-button" %>
+<% end %>
