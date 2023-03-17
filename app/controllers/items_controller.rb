@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
     @list = List.find(params[:list_id])
     @item.list = @list
     if @item.save
-      redirect_to item_path(@item)
+      redirect_to list_path(@list)
     else
       render :new, status: :unprocessable_entity
     end
@@ -23,8 +23,8 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     @item.update(item_params)
+    @list = @item.list
     if @item.save!
-      @list = @item.list
       redirect_to list_path(@list)
     else
       render new, status: :unprocessable_entity

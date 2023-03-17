@@ -1,5 +1,21 @@
-<%= simple_form_for [@list, @item] do |f| %>
+<%= form_for [@list, @item] do |f| %>
+  <h1 class="text-2xl text-center"><%= f.label :What_shall_we_name_this_todo_item? %></h1>
+  <div class="w-fit mx-auto my-2">
+    <%= f.text_field :name, size: "50x1" %>
+  </div>
+  <h1 class="text-1xl text-center my-2"><%= f.label :Enter_any_content_about_the_item_you_would_like %></h1>
+  <div class="w-fit mx-auto">
+    <%= f.text_area :content, size: "50x5" %>
+  </div>
+  <div class="w-fit mx-auto">
+    <%= f.submit class: "sign-button" %>
+  </div>
+<% end %>
+
+
+
+<!-- <%= simple_form_for [@list, @item] do |f| %>
   <%= f.input :name, label: "What would you like to name this todo item?" %>
   <%= f.input :content, label: "Enter any content about the item that you would like" %>
   <%= f.button :submit, class: "sign-button" %>
-<% end %>
+<% end %> --->
