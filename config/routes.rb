@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :lists, only: [:new, :create, :index, :show, :destroy] do
     resources :items, only: [:new, :create]
   end
-  resources :items, only: [:show, :destroy]
+  resources :items, only: [:edit, :update, :destroy]
   root 'lists#index'
 end

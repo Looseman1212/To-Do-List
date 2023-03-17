@@ -43,3 +43,7 @@
   left: -2px;
   box-shadow: 0px 0px;
 }
+
+.green-hover:hover {
+  color: #4CAF50;
+}
