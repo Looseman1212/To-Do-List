@@ -1,4 +1,16 @@
-<%= simple_form_for @list do |f| %>
+<%= form_for @list do |f| %>
+  <h1 class="text-center text-2xl"><%= f.label :Enter_the_name_for_your_new_list_of_items! %></h1>
+  <div class="w-96 mx-auto mt-2">
+    <p class="mx-auto">Name: <%= f.text_field :name, class: "input-box", size: "60x10" %></p>
+  </div>
+  <div class="w-1/5 text-center mx-auto mt-1">
+    <%= f.submit class: "sign-button" %>
+  </div>
+<% end %>
+
+
+
+<!-- <%= simple_form_for @list do |f| %>
   <%= f.input :name, label: 'What would you like to name this list?'%>
   <%= f.button :submit, class: "sign-button" %>
-<% end %>
+<% end %> -->
