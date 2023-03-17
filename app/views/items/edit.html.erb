@@ -1,0 +1,28 @@
+<%= link_to list_path(@list) do %>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+  </svg>
+<% end %>
+
+<h1 class="text-center text-2xl">Current title: <%= @item.name %></h1>
+<p class="text-center">Current content: <%= @item.content %></p>
+
+<%= form_with model: @item, local: true do |f| %>
+  <div class="grid grid-cols-2">
+    <div class="justify-self-end">
+      <%= f.label :New_name %>
+    </div>
+    <div class="justify-self-start">
+      <%= f.text_field :name %>
+    </div>
+    <div class="justify-self-end">
+      <%= f.label :New_content %>
+    </div>
+    <div class="justify-self-start">
+      <%= f.text_area :content, size: "60x10" %>
+    </div>
+    <div class="justify-self-end">
+      <%= f.submit "Update item", data: { turbo_method: :post } %>
+    </div>
+  </div>
+<% end %>

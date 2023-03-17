@@ -15,9 +15,20 @@ class ItemsController < ApplicationController
     end
   end
 
-  def show
+  def edit
     @item = Item.find(params[:id])
-    @list = List.find(@item.list_id)
+    @list = @item.list
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    @item.update(item_params)
+    if @item.save!
+      @list = @item.list
+      redirect_to list_path(@list)
+    else
+      render new, status: :unprocessable_entity
+    end
   end
 
   def destroy
