@@ -21,3 +21,7 @@
   background-color: #6B4B3E;
   border-radius: 20px;
 }
+
+.list-row:hover {
+  outline: 3px dotted red;
+}
